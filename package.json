@@ -1,0 +1,19 @@
+{
+  "name": "arranmore-fe",
+  "version": "1.0.0",
+  "description": "FE for Arranmore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paddycakes/arranmore-fe.git"
+  },
+  "author": "Paddy Gallagher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paddycakes/arranmore-fe/issues"
+  },
+  "homepage": "https://github.com/paddycakes/arranmore-fe#readme"
+}
