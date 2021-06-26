@@ -10,10 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/paddycakes/arranmore-fe.git"
   },
-  "author": "Paddy Gallagher",
+  "contributors": [
+    {
+      "name": "Paddy Gallagher"
+    },
+    {
+      "name": "Seamus Bonner"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/paddycakes/arranmore-fe/issues"
   },
-  "homepage": "https://github.com/paddycakes/arranmore-fe#readme"
+  "homepage": "https://github.com/paddycakes/arranmore-fe#readme",
+  "devDependencies": {
+    "eslint": "^7.29.0"
+  }
 }
