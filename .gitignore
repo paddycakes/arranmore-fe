@@ -22,3 +22,6 @@ build/
 .env
 .env.test
 
+# Notes
+cmds.txt
+
