@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "id": "Install Dependencies",
+      "name": "node:14.16.0-alpine",
+      "entrypoint": "npm",
+      "dir": "/workspace",
+      "args": ["install"],
+      "timeout": "300s"
+    },
+    {
+      "id": "Build Package",
+      "name": "node:14.16.0-alpine",
+      "entrypoint": "npm",
+      "dir": "/workspace",
+      "args": ["run-script", "build"]
+    },
+    {
+      "name": "gcr.io/google.com/cloudsdktool/cloud-sdk",
+      "entrypoint": "bash",
+      "args": [
+        "-c",
+        "gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy"
+      ]
+    }
+  ],
+  "timeout": "3600s"
+}
