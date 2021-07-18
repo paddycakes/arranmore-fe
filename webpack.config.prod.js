@@ -10,5 +10,6 @@ module.exports = {
     publicPath: 'build/js',
   },
   devtool: 'cheap-source-map',
-  plugins: [new CleanPlugin.CleanWebpackPlugin()],
+  // TODO: Fix this.
+  // plugins: [new CleanPlugin.CleanWebpackPlugin()],
 };

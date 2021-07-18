@@ -15,5 +15,6 @@ module.exports = {
   devServer: {
     contentBase: './',
   },
-  plugins: [new CleanPlugin.CleanWebpackPlugin()],
+  // TODO: Fix this.
+  // plugins: [new CleanPlugin.CleanWebpackPlugin()],
 };
