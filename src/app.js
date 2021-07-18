@@ -2,7 +2,10 @@ import { fetchSensorMetrics } from './services/api';
 
 console.log('Hello Arranmore Island!!!');
 
-const clientId = '123';
-const metrics = fetchSensorMetrics(clientId);
+getSensorMetrics();
 
-console.log(`Sensor metrics: ${JSON.stringify(metrics)}`);
+async function getSensorMetrics() {
+  const clientId = '123';
+  const metrics = await fetchSensorMetrics(clientId);
+  console.log(`Sensor metrics: ${JSON.stringify(metrics)}`);
+}
