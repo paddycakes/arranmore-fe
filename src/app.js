@@ -1,11 +1,18 @@
 import { fetchSensorMetrics } from './services/api';
 
-console.log('Hello Arranmore Island!!!');
+const btnLogin = document.querySelector('.login__btn');
+const inputLoginClientID = document.querySelector('.login__input--deviceid');
 
-getSensorMetrics();
+btnLogin.addEventListener('click', async function (e) {
+  //prevent form submitting
+  e.preventDefault();
 
-async function getSensorMetrics() {
-  const clientId = '123';
-  const metrics = await fetchSensorMetrics(clientId);
-  console.log(`Sensor metrics: ${JSON.stringify(metrics)}`);
-}
+  const loginClientId = inputLoginClientID.value;
+
+  if (loginClientId !== '') {
+    const metrics = await fetchSensorMetrics(loginClientId);
+    console.log(`Sensor metrics: ${JSON.stringify(metrics)}`);
+  } else {
+    alert('Please enter a value in the Device ID field ');
+  }
+});
