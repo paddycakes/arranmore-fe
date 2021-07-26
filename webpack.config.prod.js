@@ -1,15 +1,18 @@
 const path = require('path');
-const CleanPlugin = require('clean-webpack-plugin');
+// const CleanPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
   entry: './src/app.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'build', 'js'),
-    publicPath: 'build/js',
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: 'dist',
   },
-  devtool: 'cheap-source-map',
-  // TODO: Fix this.
-  // plugins: [new CleanPlugin.CleanWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+    }),
+  ],
 };

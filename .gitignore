@@ -6,8 +6,8 @@ npm-debug.log*
 # Dependency directories
 node_modules/
 
-# Build
-build/
+# Build and distribution
+dist/
 
 # Optional npm cache directory
 .npm

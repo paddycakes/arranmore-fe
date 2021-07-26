@@ -7,6 +7,8 @@ btnLogin.addEventListener('click', async function (e) {
   //prevent form submitting
   e.preventDefault();
 
+  console.log('Here we are');
+
   const loginClientId = inputLoginClientID.value;
 
   if (loginClientId !== '') {
