@@ -36,11 +36,9 @@ btnLogin.addEventListener('click', async function (e) {
     console.log(userPass);
 
     const metrics = await fetchSensorMetrics(deviceId, apiKey);
-
     console.log(`Sensor metrics: ${JSON.stringify(metrics)}`);
   } else {
     document.querySelector('.login__input--deviceid').value = 'Incorrect ID';
-    // alert('Incorrect Password!');
   }
 });
 console.log(apiKey);
