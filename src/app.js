@@ -19,8 +19,6 @@ const password = {
   id: 'arranmoreIoT',
 };
 
-const deviceId = deviceIdInput.value;
-
 //Base64 Handler
 const userPass = `${account1.owner}:${password.id}`;
 const apiKey = btoa(userPass);
@@ -29,6 +27,7 @@ btnLogin.addEventListener('click', async function (e) {
   //prevent form submitting
   e.preventDefault();
 
+  const deviceId = deviceIdInput.value;
   console.log(deviceId);
 
   if (deviceId !== '') {
